@@ -1,10 +1,19 @@
 <template>
-  <div class="home">Home</div>
+  <div class="home">Task Manager
+    <AddTask/>
+  </div>
+  
 </template>
 
 <script lang="ts" setup></script>
 <script lang="ts">
 import { defineComponent } from "vue";
-export default defineComponent({});
+import AddTask from './../components/AddTask/AddTask.vue'
+export default defineComponent({
+  name: 'Home',
+  components:{
+    AddTask
+  }
+});
 </script>
 <style></style>
