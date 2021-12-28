@@ -8,7 +8,7 @@ const TASKS = [
     {
         id: 2,
         description: "take out trash",
-        completed: true
+        completed: false
     },
     {
         id: 3,
@@ -18,12 +18,12 @@ const TASKS = [
     {
         id: 4,
         description: "fill out passport paperwork",
-        completed: true
+        completed: false
     },
     {
         id: 5,
         description: "pickup groceries",
-        completed: true
+        completed: false
     }
 ] as Task[]
 

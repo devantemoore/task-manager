@@ -1,7 +1,7 @@
 <template>
   <tr>
       <td>{{ task.id }}</td>
-      <td>{{ task.description }}</td>
+      <td :style="completed">{{ task.description }}</td>
       <td><input type='checkbox' v-model="checked" /></td>
   </tr>
 </template>
@@ -11,6 +11,7 @@ const props = defineProps<{
     task: Task
 }>();
 const checked = computed(() => props.task.completed)
+const completed = checked ? 'text-decoration: line-through' : '';
 </script>
 
 <script lang='ts'>
