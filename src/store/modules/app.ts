@@ -9,6 +9,9 @@ const mutations = {
     },
     'CLEAR_TASKS'(state:any){
         state.tasks = [];
+    },
+    'ADD_TASK'(state:any, task: Task){
+        state.tasks.push(task);
     }
 }
 const actions = {
@@ -21,6 +24,11 @@ const actions = {
         commit
     }: any){
         commit('CLEAR_TASKS')
+    },
+    addTask({
+        commit
+    }: any, task: Task){
+        commit('ADD_TASK', task)
     }
 }
 const getters = {
