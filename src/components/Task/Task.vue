@@ -1,17 +1,25 @@
 <template>
   <tr>
-      <td>{{ task.id }}</td>
+      <td :style="completed">{{ task.id }}</td>
       <td :style="completed">{{ task.description }}</td>
-      <td><input type='checkbox' v-model="checked" /></td>
+      <td><input type='checkbox' v-model="checked" @change="toggleComplete(task.id)" /></td>
   </tr>
 </template>
 
 <script lang='ts' setup>
+import {useStore} from 'vuex'
+
+const store = useStore();
 const props = defineProps<{
     task: Task
 }>();
 const checked = computed(() => props.task.completed)
-const completed = checked ? 'text-decoration: line-through' : '';
+const completed = computed(() => props.task.completed ? 'text-decoration: line-through' : '')
+const toggleComplete = (id) => {
+  if ( id ){
+    store.dispatch('toggleComplete', id);
+  }
+}
 </script>
 
 <script lang='ts'>

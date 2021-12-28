@@ -12,6 +12,12 @@ const mutations = {
     },
     'ADD_TASK'(state:any, task: Task){
         state.tasks.push(task);
+    },
+    'TOGGLE_COMPLETE'(state:any, id: number){
+        const index = state.tasks.findIndex((element: Task) => {
+            return element.id == id;
+        });
+        state.tasks[index].completed = !state.tasks[index].completed;
     }
 }
 const actions = {
@@ -29,6 +35,11 @@ const actions = {
         commit
     }: any, task: Task){
         commit('ADD_TASK', task)
+    },
+    toggleComplete({
+        commit
+    }: any, id: number){
+        commit('TOGGLE_COMPLETE', id)
     }
 }
 const getters = {
