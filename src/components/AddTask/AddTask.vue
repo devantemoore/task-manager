@@ -1,6 +1,6 @@
 <template>
   <div class="add-task">
-      <input class='task-input' type='text' v-model="taskInput" />
+      <input id="inputField" class='task-input' type='text' v-model="taskInput" @keydown.enter="addTask(taskInput)" />
       <button type='button' class='add-btn' @click="addTask(taskInput)">Add</button>
   </div>
 </template>
@@ -20,6 +20,7 @@
         completed: false
       } as Task;
       store.dispatch('addTask', task);
+      document.getElementById('inputField').value='';
     } 
   }
 </script>
