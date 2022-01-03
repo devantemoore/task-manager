@@ -1,5 +1,5 @@
 <template>
-  <tr>
+  <tr class="task-item">
       <td :style="completed">{{ task.id }}</td>
       <td :style="completed">{{ task.description }}</td>
       <td><input type='checkbox' v-model="checked" @change="toggleComplete(task.id)" /></td>

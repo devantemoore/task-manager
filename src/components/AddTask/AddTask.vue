@@ -33,16 +33,5 @@
 
 
 <style>
-.add-task {
-    width: 450px;
-}
-.task-input {
-   width: 100%;
-   height: 2rem;
-   margin: 1rem 0.5rem 0 0.5rem
-}
-.add-btn{
-    width: 100%;
-    margin: 0 0 0 0.5rem
-}
+
 </style>

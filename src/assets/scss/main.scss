@@ -1,20 +1,30 @@
-body{
+*:focus{
+    outline:none
+}
+html, body{
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     color: #4d4d4d;
-    font-size: 18px;
-    line-height: 1.4em;
     margin: 0;
+    padding: 0;
+    height: 100%;
 }
-.app-container {
-    margin-left: 10rem;
-    margin-right: 10rem;
+body {
+  background: rgb(246, 252, 247);
+  background: linear-gradient(119deg, rgb(247, 252, 247) 0%, rgb(224, 236, 247) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-button {
-    background: none;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border-radius: 5px 5px 5px 5px;
-    
-}
-button:hover{
-        cursor: auto;
+
+@media only screen and (min-width: 425px){
+    .home{
+        width: 425px;
+        font-size: 12px;
     }
+    input{
+        width: 100%;
+    }
+    .task-item{
+        font-size: 10px;
+        color: red;
+    }
+}
