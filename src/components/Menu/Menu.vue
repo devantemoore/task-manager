@@ -1,9 +1,7 @@
 <template>
-<div class="app-container">
-  <Menu></Menu>
-  <router-view></router-view>
-</div>
+  <div><MenuBar :model="items"></MenuBar></div>
 </template>
+
 <script lang='ts' setup>
   const items = ref([
     {
@@ -15,17 +13,16 @@
   ])
 </script>
 <script lang='ts'>
-import Menu from './components/Menu/Menu.vue'
+import MenuBar from 'primevue/menubar'
 import {defineComponent, ref} from 'vue'
-
 export default defineComponent({
-  name: 'app',
+  name: 'Menu',
   components: {
-    Menu
+    //MenuBar
   }
 })
-
 </script>
-<style lang='scss'>
+
+<style>
 
 </style>

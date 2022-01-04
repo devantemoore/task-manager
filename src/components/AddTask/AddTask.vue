@@ -1,7 +1,6 @@
 <template>
   <div class="add-task">
       <input id="inputField" class='task-input' type='text' v-model="taskInput" @keydown.enter="addTask(taskInput)" />
-      <button type='button' class='add-btn' @click="addTask(taskInput)">Add</button>
   </div>
 </template>
 
